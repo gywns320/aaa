@@ -41,3 +41,8 @@ footer{text-align:center;color:var(--sub);font-size:13px;padding:24px 0 40px}
 .rk.r1{background:#ffd54a;color:#5a4300}
 .rk.r2{background:#d9dee5;color:#39424e}
 .rk.r3{background:#f0b78a;color:#5c3213}
+.home-search{display:flex;gap:8px;margin:4px 0 18px}
+.home-search input{flex:1;min-width:0;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font-size:16px;background:#fff;font-family:inherit}
+.home-search input:focus{outline:none;border-color:var(--main);box-shadow:0 0 0 3px rgba(245,138,31,.2)}
+.home-search button{padding:0 18px;border:0;border-radius:12px;background:var(--main);color:#fff;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer}
+.home-search button:hover{background:var(--main-d)}

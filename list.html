@@ -11,7 +11,7 @@
 <h1>🍊 제주 먹거리·특산물</h1>
 </header>
 <main>
-<div class="top"><a class="back" href="index.html">← 처음으로</a><h2 id="title"></h2><button class="clear" id="clear">목록 비우기</button></div>
+<div class="top"><a class="back" href="김효준_index.html">← 처음으로</a><h2 id="title"></h2><button class="clear" id="clear">목록 비우기</button></div>
 <div class="toolbar">
 <input id="q" type="search" placeholder="이름으로 검색 (예: 갈치)">
 <select id="sort">
@@ -29,8 +29,9 @@
 <script>
 let view = new URLSearchParams(location.search).get('c') || '전체';
 if (view !== '__wish' && view !== '__rank' && !CATS.includes(view)) view = '전체';
-var q = '', sort = 'high';
+var q = new URLSearchParams(location.search).get('q') || '', sort = 'high';
 const $ = id => document.getElementById(id);
+$('q').value = q;   // 첫 페이지에서 검색해 넘어온 검색어를 채움
 document.title = (view === '__wish' ? '내 목록' : view === '__rank' ? '추천도 순위' : view) + ' · 제주 먹거리·특산물';
 $('title').textContent = view === '__wish' ? '👍 내 목록' : view === '__rank' ? '🏆 추천도 순위' : ICON[view] + ' ' + view;
 if (view === '__rank') { sort = 'high'; $('sort').style.display = 'none'; }

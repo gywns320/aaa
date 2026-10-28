@@ -12,6 +12,11 @@
 <p>카테고리를 고르고, 먹어 보고 싶은 음식에 👍를 눌러 나만의 목록을 만들어 보세요.</p>
 </header>
 <main>
+<form class="home-search" action="list.html" method="get">
+<input type="hidden" name="c" value="전체">
+<input name="q" type="search" placeholder="이름으로 검색 (예: 갈치)" aria-label="이름으로 검색">
+<button type="submit">🔍 검색</button>
+</form>
 <h2 class="sec-title">보고 싶은 카테고리를 골라 보세요</h2>
 <div class="home-grid" id="homeGrid"></div>
 <footer>데이터: jeju_foods.json · 추천도는 대표성과 인지도를 기준으로 한 참고값입니다.</footer>
