@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>제주 먹거리·특산물</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>🍊 제주 먹거리·특산물</h1>
+<p>카테고리를 고르고, 먹어 보고 싶은 음식에 👍를 눌러 나만의 목록을 만들어 보세요.</p>
+</header>
+<main>
+<h2 class="sec-title">보고 싶은 카테고리를 골라 보세요</h2>
+<div class="home-grid" id="homeGrid"></div>
+<footer>데이터: jeju_foods.json · 추천도는 대표성과 인지도를 기준으로 한 참고값입니다.</footer>
+</main>
+<script src="data.js"></script>
+<script src="common.js"></script>
+<script>
+const n = c => c === '전체' ? ITEMS.length : ITEMS.filter(i => i.category === c).length;
+document.getElementById('homeGrid').innerHTML = CATS.map(c =>
+  `<a class="cat-card" href="list.html?c=${encodeURIComponent(c)}"><span class="ico">${ICON[c]}</span><b>${esc(c)}</b><span class="n">${n(c)}개</span></a>`).join('')
+  + `<a class="cat-card rank" href="list.html?c=__rank"><span class="ico">🏆</span><b>추천도 순위</b><span class="n">높은 순 ${ITEMS.length}개</span></a>`
+  + `<a class="cat-card wish" href="list.html?c=__wish"><span class="ico">👍</span><b>내 목록</b><span class="n">${picked.size}개 담음</span></a>`;
+</script>
+</body>
+</html>

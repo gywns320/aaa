@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>목록 · 제주 먹거리·특산물</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>🍊 제주 먹거리·특산물</h1>
+</header>
+<main>
+<div class="top"><a class="back" href="index.html">← 처음으로</a><h2 id="title"></h2><button class="clear" id="clear">목록 비우기</button></div>
+<div class="toolbar">
+<input id="q" type="search" placeholder="이름으로 검색 (예: 갈치)">
+<select id="sort">
+<option value="high">추천도 높은 순</option>
+<option value="low">추천도 낮은 순</option>
+<option value="name">이름 가나다순</option>
+</select>
+</div>
+<div class="count" id="count"></div>
+<div class="grid" id="grid"></div>
+<footer>데이터: jeju_foods.json · 추천도는 대표성과 인지도를 기준으로 한 참고값입니다.</footer>
+</main>
+<script src="data.js"></script>
+<script src="common.js"></script>
+<script>
+let view = new URLSearchParams(location.search).get('c') || '전체';
+if (view !== '__wish' && view !== '__rank' && !CATS.includes(view)) view = '전체';
+var q = '', sort = 'high';
+const $ = id => document.getElementById(id);
+document.title = (view === '__wish' ? '내 목록' : view === '__rank' ? '추천도 순위' : view) + ' · 제주 먹거리·특산물';
+$('title').textContent = view === '__wish' ? '👍 내 목록' : view === '__rank' ? '🏆 추천도 순위' : ICON[view] + ' ' + view;
+if (view === '__rank') { sort = 'high'; $('sort').style.display = 'none'; }
+// 추천도 순위(동점이면 같은 순위)
+const RANK = {};
+[...ITEMS].sort((a, b) => b.score - a.score).forEach((i, idx, arr) => { RANK[i.name] = idx > 0 && arr[idx - 1].score === i.score ? RANK[arr[idx - 1].name] : idx + 1; });
+
+function render() {
+  $('clear').style.display = view === '__wish' && picked.size ? '' : 'none';
+  const list = ITEMS.filter(i => {
+    if (view === '__wish') { if (!picked.has(i.name)) return false; }
+    else if (view !== '전체' && view !== '__rank' && i.category !== view) return false;
+    return i.name.toLowerCase().includes(q.trim().toLowerCase());
+  });
+  list.sort((a, b) => sort === 'high' ? b.score - a.score : sort === 'low' ? a.score - b.score : a.name.localeCompare(b.name, 'ko'));
+  $('count').textContent = `${list.length}개 항목`;
+  $('grid').innerHTML = list.length ? list.map(i => {
+    const on = picked.has(i.name);
+    return `<article class="card ${on ? 'picked' : ''}">
+      ${view === '__rank' ? `<span class="rk r${RANK[i.name] <= 3 ? RANK[i.name] : 0}">${RANK[i.name]}위</span>` : ''}
+      <button class="like ${on ? 'on' : ''}" data-n="${esc(i.name)}" aria-label="내 목록 담기/빼기" title="${on ? '내 목록에서 빼기' : '내 목록에 담기'}">👍</button>
+      <h3>${esc(i.name)}</h3><span class="tag">${esc(i.category)}</span>
+      <p class="desc">${esc(i.description)}</p>
+      <div class="score"><span>추천도 ${i.score}</span><div class="bar"><i style="width:${i.score}%"></i></div></div>
+    </article>`;
+  }).join('') : `<div class="empty">${view === '__wish' ? '아직 담은 항목이 없어요. 다른 카테고리에서 👍를 눌러 보세요.' : '검색 결과가 없습니다.'}</div>`;
+}
+$('grid').addEventListener('click', e => {
+  const b = e.target.closest('.like'); if (!b) return;
+  const n = b.dataset.n;
+  picked.has(n) ? picked.delete(n) : picked.add(n); savePicked(); render();
+});
+$('clear').addEventListener('click', () => { picked.clear(); savePicked(); render(); });
+$('q').addEventListener('input', e => { q = e.target.value; render(); });
+$('sort').addEventListener('change', e => { sort = e.target.value; render(); });
+render();
+</script>
+</body>
+</html>

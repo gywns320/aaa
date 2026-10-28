@@ -1,0 +1,735 @@
+// jeju_foods.json 과 같은 내용 (파일로 열어도 동작하도록 JS로 포함)
+window.JEJU_DATA = {
+  "region": "제주특별자치도",
+  "topic": "제주 먹거리·특산물",
+  "items": [
+    {
+      "name": "고기국수",
+      "category": "음식",
+      "description": "돼지 사골 육수에 중면과 수육을 올린 제주의 대표 국수. 잔치 음식에서 유래했다.",
+      "score": 92,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "몸국",
+      "category": "음식",
+      "description": "돼지 육수에 모자반(몸)을 넣고 끓인 제주 잔치 국물 요리.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "각재기국",
+      "category": "음식",
+      "description": "각재기(전갱이)를 배추와 함께 맑게 끓인 제주식 생선국.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "갈치국",
+      "category": "음식",
+      "description": "싱싱한 갈치에 늙은호박과 배추를 넣어 끓인 시원한 국.",
+      "score": 78,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "갈치조림",
+      "category": "음식",
+      "description": "무와 감자를 깔고 은갈치를 양념에 졸인 제주 대표 밥반찬.",
+      "score": 88,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "성게미역국",
+      "category": "음식",
+      "description": "보라성게알을 듬뿍 넣어 끓이는 제주 해안가 미역국.",
+      "score": 76,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "보말칼국수",
+      "category": "음식",
+      "description": "보말(고둥)로 낸 진한 육수의 칼국수.",
+      "score": 80,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "접짝뼈국",
+      "category": "음식",
+      "description": "돼지 갈비뼈(접짝뼈)를 푹 고아 낸 제주 향토 국.",
+      "score": 55,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "고사리육개장",
+      "category": "음식",
+      "description": "제주 고사리와 돼지고기를 푹 끓인 얼큰한 육개장.",
+      "score": 85,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "멜국",
+      "category": "음식",
+      "description": "제철 멸치(멜)를 배추와 넣어 끓인 시원한 국.",
+      "score": 58,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "자리물회",
+      "category": "음식",
+      "description": "자리돔을 뼈째 썰어 된장 또는 식초 육수에 말아먹는 여름 물회.",
+      "score": 84,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "한치물회",
+      "category": "음식",
+      "description": "오징어류 한치를 채 썰어 새콤달콤한 육수에 먹는 물회.",
+      "score": 82,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "옥돔구이",
+      "category": "음식",
+      "description": "담백하고 쫀득한 옥돔을 소금 간하여 구운 제주 대표 생선구이.",
+      "score": 86,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "옥돔미역국",
+      "category": "음식",
+      "description": "옥돔으로 맑게 끓인 제주 생일상 미역국.",
+      "score": 74,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "고등어회",
+      "category": "음식",
+      "description": "제주 바다 갓 잡은 고등어를 회로 즐기는 별미.",
+      "score": 83,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "고등어조림",
+      "category": "음식",
+      "description": "무를 깔고 묵은지나 양념으로 조린 고등어 요리.",
+      "score": 72,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "전복죽",
+      "category": "음식",
+      "description": "내장까지 갈아 넣어 고소하고 진한 제주 전복죽.",
+      "score": 90,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "전복뚝배기",
+      "category": "음식",
+      "description": "제주 전복을 뚝배기에 넣어 끓인 영양 국물 요리.",
+      "score": 79,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "해물뚝배기",
+      "category": "음식",
+      "description": "각종 해산물과 채소를 넣어 얼큰하게 끓인 뚝배기.",
+      "score": 75,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "오분자기뚝배기",
+      "category": "음식",
+      "description": "전복 닮은 오분자기를 넣고 끓인 제주 향토 뚝배기.",
+      "score": 81,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "돔베고기",
+      "category": "음식",
+      "description": "삶은 돼지고기를 도마(돔베)째 썰어 내는 제주식 수육.",
+      "score": 89,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주식 순대",
+      "category": "음식",
+      "description": "찹쌀과 채소 등을 채워 만든 제주식 순대.",
+      "score": 54,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "꿩메밀칼국수",
+      "category": "음식",
+      "description": "꿩 육수와 메밀면으로 만든 제주 옛 겨울 음식.",
+      "score": 52,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "메밀비빔국수",
+      "category": "음식",
+      "description": "제주산 메밀면을 양념에 비벼 먹는 국수.",
+      "score": 66,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "성게비빔밥",
+      "category": "음식",
+      "description": "성게알을 올려 비벼 먹는 해산물 비빔밥.",
+      "score": 77,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "톳밥",
+      "category": "음식",
+      "description": "제주 톳을 넣어 지은 향긋한 밥.",
+      "score": 50,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "말고기육회",
+      "category": "음식",
+      "description": "제주마 고기로 만든 육회. 제주 향토 음식.",
+      "score": 45,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "갈치구이",
+      "category": "음식",
+      "description": "은갈치를 통째로 구워 담백하게 즐기는 요리.",
+      "score": 85,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "몸국 정식",
+      "category": "음식",
+      "description": "몸국을 중심으로 한 제주 반상 한 상차림.",
+      "score": 48,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "접짝뼈 갈비찜",
+      "category": "음식",
+      "description": "돼지 접짝뼈를 양념에 쪄낸 제주식 갈비찜.",
+      "score": 47,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "은갈치",
+      "category": "해산물",
+      "description": "은빛 비늘이 선명한 제주 대표 갈치. 낚시로 잡아 품질이 높다.",
+      "score": 93,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "옥돔",
+      "category": "해산물",
+      "description": "붉은빛이 도는 제주 대표 생선. 제사상에도 오른다.",
+      "score": 88,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "한치",
+      "category": "해산물",
+      "description": "제주 여름철 대표 오징어류. 쫄깃하고 담백하다.",
+      "score": 80,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 전복",
+      "category": "해산물",
+      "description": "해녀가 채취하거나 양식한 제주의 대표 해산물.",
+      "score": 91,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "오분자기",
+      "category": "해산물",
+      "description": "전복과 닮은 작은 조개류. 제주 해안에서 난다.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "뿔소라",
+      "category": "해산물",
+      "description": "제주 해녀가 채취하는 대표 소라. 구이와 회로 먹는다.",
+      "score": 78,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "보말",
+      "category": "해산물",
+      "description": "바위에 붙은 작은 고둥. 칼국수나 죽에 쓰인다.",
+      "score": 72,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "성게(보라성게)",
+      "category": "해산물",
+      "description": "해녀가 채취하는 성게알. 봄~여름이 제철이다.",
+      "score": 75,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "자리돔",
+      "category": "해산물",
+      "description": "제주 여름 대표 생선. 물회와 구이로 먹는다.",
+      "score": 82,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "방어",
+      "category": "해산물",
+      "description": "겨울 모슬포 방어가 유명하다.",
+      "score": 68,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 멸치(멜)",
+      "category": "해산물",
+      "description": "제철 멜은 국과 튀김으로 즐긴다.",
+      "score": 50,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "톳",
+      "category": "해산물",
+      "description": "제주 바다의 해조류. 무침과 밥에 쓰인다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "우뭇가사리",
+      "category": "해산물",
+      "description": "한천과 우무 재료. 제주식 우뭇가사리 냉국이 별미다.",
+      "score": 50,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 돌미역",
+      "category": "해산물",
+      "description": "제주 청정 해안에서 자라는 거친 질감의 미역.",
+      "score": 57,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "감귤",
+      "category": "과일",
+      "description": "제주를 대표하는 온주밀감. 겨울 대표 과일.",
+      "score": 96,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "한라봉",
+      "category": "과일",
+      "description": "꼭지가 한라산을 닮은 달콤새콤한 만감류.",
+      "score": 92,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "천혜향",
+      "category": "과일",
+      "description": "향이 진하고 과즙이 풍부한 만감류.",
+      "score": 87,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "레드향",
+      "category": "과일",
+      "description": "한라봉과 온주밀감을 교배한 붉은빛 만감류.",
+      "score": 84,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "황금향",
+      "category": "과일",
+      "description": "크고 단맛이 강한 만감류.",
+      "score": 72,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "카라향",
+      "category": "과일",
+      "description": "껍질이 얇고 달콤한 오렌지계 과일.",
+      "score": 62,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "청귤",
+      "category": "과일",
+      "description": "덜 익은 푸른 귤. 청과 차에 쓰인다.",
+      "score": 65,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "하귤",
+      "category": "과일",
+      "description": "여름 귤이라 불리는 크고 신맛 나는 귤.",
+      "score": 42,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "애플망고",
+      "category": "과일",
+      "description": "제주 온실에서 재배하는 달콤한 망고.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "용과",
+      "category": "과일",
+      "description": "제주 온실 재배 열대과일.",
+      "score": 48,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "백향과",
+      "category": "과일",
+      "description": "새콤달콤한 열대과일. 제주에서 재배한다.",
+      "score": 52,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 바나나",
+      "category": "과일",
+      "description": "제주에서 재배한 국산 바나나.",
+      "score": 44,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "구좌 당근",
+      "category": "농산물",
+      "description": "제주 구좌읍에서 나는 당근. 단맛이 강하다.",
+      "score": 76,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 월동무",
+      "category": "농산물",
+      "description": "겨울을 나며 자라 달고 아삭한 무.",
+      "score": 55,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 마늘(마농)",
+      "category": "농산물",
+      "description": "제주 향토 마늘. 마농이라 부른다.",
+      "score": 58,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 양배추",
+      "category": "농산물",
+      "description": "겨울 제주에서 자라는 달고 부드러운 양배추.",
+      "score": 45,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 고사리",
+      "category": "농산물",
+      "description": "봄 한라산 자락에서 채취하는 고사리.",
+      "score": 80,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 메밀",
+      "category": "농산물",
+      "description": "제주의 대표 곡물. 국수와 빙떡의 재료.",
+      "score": 64,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "우도 땅콩",
+      "category": "농산물",
+      "description": "우도의 모래땅에서 자란 고소한 땅콩.",
+      "score": 83,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 고구마",
+      "category": "농산물",
+      "description": "달고 포슬한 제주 고구마.",
+      "score": 56,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 유채꿀",
+      "category": "농산물",
+      "description": "봄 유채꽃에서 얻은 꿀.",
+      "score": 46,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 흑돼지",
+      "category": "음식",
+      "description": "오겹살과 근고기로 유명한 제주 토종 흑돼지.",
+      "score": 95,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주마 말고기",
+      "category": "음식",
+      "description": "제주의 말 문화에서 이어진 고기 요리.",
+      "score": 40,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 토종닭",
+      "category": "음식",
+      "description": "백숙이나 닭요리로 즐기는 제주 토종닭.",
+      "score": 50,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "오메기떡",
+      "category": "디저트",
+      "description": "차조(오메기)로 만든 떡. 팥소를 올려 먹는다.",
+      "score": 88,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "빙떡",
+      "category": "디저트",
+      "description": "메밀 반죽에 무채를 말아 만든 담백한 떡.",
+      "score": 62,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "기정떡",
+      "category": "디저트",
+      "description": "술로 발효시킨 제주식 증편.",
+      "score": 57,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "상웨떡",
+      "category": "디저트",
+      "description": "밀가루에 막걸리로 부풀려 쪄낸 제주 전통 떡.",
+      "score": 43,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "보리빵",
+      "category": "디저트",
+      "description": "보리 반죽을 쪄낸 제주식 빵.",
+      "score": 51,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "조침떡",
+      "category": "디저트",
+      "description": "차조로 만든 제주식 잔치 떡.",
+      "score": 44,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "오메기술",
+      "category": "음료",
+      "description": "차조로 빚은 제주 전통 탁주.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "고소리술",
+      "category": "음료",
+      "description": "오메기술을 증류한 제주 전통 소주.",
+      "score": 55,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "쉰다리",
+      "category": "음료",
+      "description": "남은 밥을 발효시킨 제주 전통 음료.",
+      "score": 35,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "한라산 소주",
+      "category": "음료",
+      "description": "제주를 대표하는 소주.",
+      "score": 84,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "제주 녹차",
+      "category": "음료",
+      "description": "한라산 자락에서 재배한 녹차.",
+      "score": 66,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "감귤주스",
+      "category": "음료",
+      "description": "제주 감귤을 짜서 만든 주스.",
+      "score": 74,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "감귤 아이스크림",
+      "category": "디저트",
+      "description": "감귤을 넣은 제주식 아이스크림.",
+      "score": 68,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "우도 땅콩 아이스크림",
+      "category": "디저트",
+      "description": "우도 땅콩을 올려 낸 아이스크림.",
+      "score": 76,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "녹차 롤케이크",
+      "category": "디저트",
+      "description": "제주 녹차를 활용한 롤케이크.",
+      "score": 64,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "당근케이크",
+      "category": "디저트",
+      "description": "구좌 당근을 활용한 케이크.",
+      "score": 55,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "한라봉 에이드",
+      "category": "디저트",
+      "description": "한라봉을 활용한 새콤한 에이드.",
+      "score": 59,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "감귤초콜릿",
+      "category": "기념품·가공식품",
+      "description": "귤피를 넣은 대표 제주 기념품.",
+      "score": 82,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "한라봉청",
+      "category": "기념품·가공식품",
+      "description": "한라봉으로 만든 청. 차와 에이드로 먹는다.",
+      "score": 58,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "감귤칩",
+      "category": "기념품·가공식품",
+      "description": "귤을 얇게 말린 간식.",
+      "score": 53,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "귤피차",
+      "category": "기념품·가공식품",
+      "description": "귤 껍질(진피)을 말려 우린 차.",
+      "score": 45,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "백년초 제품",
+      "category": "기념품·가공식품",
+      "description": "제주 백년초를 활용한 가공식품.",
+      "score": 40,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "name": "마농장아찌",
+      "category": "기념품·가공식품",
+      "description": "제주 마늘로 만든 장아찌.",
+      "score": 38,
+      "selected": false,
+      "source": "https://www.visitjeju.net"
+    }
+  ]
+};
